@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body{
+  width:450px;
+}
+</style>
+<title>News Helper 옵션</title>
+</head>
+<body>
+
+선호하는 색상:
+<select id="color">
+ <option value="highlight_yellow">노란색 형광펜</option>
+ <option value="highlight_gray">회색 형광펜</option>
+ <option value="font_gray">회색 글씨</option>
+ <option value="strike_through">취소선</option>
+</select>
+
+<label>
+  <input type="checkbox" id="like">
+  모호성 표시 기능을 사용하지 않습니다.
+</label>
+<br><br>
+<div id="status"></div>
+<button id="save">저장</button>
+
+<script src="options.js"></script>
+</body>
+</html>

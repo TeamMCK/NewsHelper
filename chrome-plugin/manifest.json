@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+
+  "name": "News Helper",
+  "description": "뉴스를 읽는 독자에게 합리적인 의사 결정을 위한 판단 근거를 제공합니다.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "https://okb0u8spwi.execute-api.ap-northeast-2.amazonaws.com/dev/*"
+  ],
+  "background":[
+    "activeTab"
+  ],
+  "commands": {
+  "_execute_browser_action": {
+      "suggested_key": {
+            "default": "Ctrl+Shift+Y"
+          }
+        }
+  }
+  ,
+  "options_page":"options.html"
+  ,
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "content_scripts":[{
+    "js":["jquery.min.js"],
+    "matches":["<all_urls>"]
+    }]
+  ,
+
+
+  "icons":{
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
